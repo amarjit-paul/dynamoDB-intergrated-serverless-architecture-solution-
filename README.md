@@ -3,24 +3,13 @@ Built a production ready architecture using AWS and dynamo DB
 
 It is a close enough system used in todays real systems. 
 
-# full architecture 
-
-User
-  │
-  ▼
-CloudFront
-  │
-  ▼
-S3 Static Website
-  │
-  ▼
-API Gateway
-  │
-  ▼
-Lambda Function
-  │
-  ▼
-DynamoDB
+# Architecture Flow
+1. User accesses the application through CloudFront.
+2. CloudFront serves the frontend files hosted in Amazon S3.
+3. Frontend sends API requests to Amazon API Gateway.
+4. API Gateway invokes the AWS Lambda function.
+5. Lambda processes the request and stores/retrieves data from DynamoDB.
+6. The response is returned to the frontend and displayed to the user.
 
 # AWS services used -
 
