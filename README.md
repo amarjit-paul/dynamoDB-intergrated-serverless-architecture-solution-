@@ -27,9 +27,9 @@ It is a close enough system used in todays real systems.
 
 A simple app using – 
 
-1.User name enters 
-2.Data stored iin DynamoDB
-3.Response shown in UI
+1.User name enters. 
+2.Data stored iin DynamoDB.
+3.Response shown in UI.
 
 
 # what i implemented ?
