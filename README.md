@@ -5,7 +5,34 @@ It is a close enough system used in todays real systems.
 
 # full architecture 
 
-user --> CloudFront --> S3 --> API Gateway --> Lambda --> DynamoDB
+User
+  │
+  ▼
+CloudFront
+  │
+  ▼
+S3 Static Website
+  │
+  ▼
+API Gateway
+  │
+  ▼
+Lambda Function
+  │
+  ▼
+DynamoDB
+
+# AWS services used -
+
+| Service     | Purpose                             |
+| ----------- | ----------------------------------- |
+| CloudFront  | Global content delivery and caching |
+| S3          | Frontend hosting                    |
+| API Gateway | REST API endpoint                   |
+| Lambda      | Serverless backend processing       |
+| DynamoDB    | NoSQL database storage              |
+| IAM         | Permissions and security            |
+
 
 # what is it ??
 
@@ -37,7 +64,29 @@ User enters a name --> API processed it --> data is stored --> response is retur
 3. Startup products.
 4. Global content delivery platforms.
 
+# Deployment steps 
+1. Deploy DynamoDB table
+2. Create Lambda function
+3. Configure API Gateway
+4. Host frontend on S3
+5. Connect CloudFront distribution
+6. Test end-to-end workflow
 
+
+# Key Features
+1.Fully serverless architecture
+2.No server management required
+3.Scalable backend using AWS Lambda
+4.Low-latency content delivery through CloudFront
+5.Persistent data storage with DynamoDB
+6.Pay-as-you-use pricing model
+
+# Future Improvements
+1.Add user authentication using Amazon Cognito
+2.Implement HTTPS with ACM certificates
+3.Add input validation and error handling
+4.Store logs in CloudWatch for monitoring
+5.Integrate CI/CD using GitHub Actions
 
 
 # pictures showing the works 
@@ -52,7 +101,7 @@ User enters a name --> API processed it --> data is stored --> response is retur
 
 <img width="940" height="434" alt="image" src="https://github.com/user-attachments/assets/268ee9c5-3b1a-4d1b-8e68-6dee077ea894" />
 
-3. lamnda function
+3. lambda function
 
 <img width="940" height="436" alt="image" src="https://github.com/user-attachments/assets/286d81dd-a263-4bae-b88a-0b4e7e84c0d6" />
 
@@ -64,7 +113,7 @@ User enters a name --> API processed it --> data is stored --> response is retur
 
 <img width="940" height="501" alt="image" src="https://github.com/user-attachments/assets/f2819b62-a0fa-470f-8a73-ea9e38a5c419" />
 
-6. test reffernce
+6. test refference
 
 <img width="940" height="426" alt="image" src="https://github.com/user-attachments/assets/bec81a13-5fc3-4005-a8d3-115f3529a905" />
 
@@ -72,12 +121,12 @@ User enters a name --> API processed it --> data is stored --> response is retur
 
 <img width="940" height="500" alt="image" src="https://github.com/user-attachments/assets/73490246-892b-4c77-94f5-a584a0857a40" />
 
-storing of name 
+8. storing of name 
 
 <img width="940" height="436" alt="image" src="https://github.com/user-attachments/assets/5b929844-50cf-4082-ac11-55b80c840c68" />
 
-table 
+9. table 
 
 <img width="940" height="477" alt="image" src="https://github.com/user-attachments/assets/bebd198a-3f76-4289-a0ac-10f446551dbd" />
 
-ultimate output
+10. ultimate output
