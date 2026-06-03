@@ -1,4 +1,4 @@
-# dynamoDB-intergrated-serverless-architecture-solution-
+# DynamoDB-intergrated-serverless-architecture-solution-
 Built a production ready architecture using AWS and dynamo DB
 
 It is a close enough system used in todays real systems. 
